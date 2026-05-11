@@ -1,0 +1,62 @@
+.mobile-controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem;
+  padding-bottom: env(safe-area-inset-bottom, 1rem);
+  pointer-events: none;
+  user-select: none;
+  z-index: 60;
+  -webkit-touch-callout: none;
+  touch-action: manipulation;
+}
+
+@media (min-width: 769px) {
+  .mobile-controls {
+    display: none;
+  }
+}
+
+.controls-left,
+.controls-right {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.control-btn {
+  width: 4.5rem;
+  height: 4.5rem;
+  background: rgba(0, 212, 255, 0.2);
+  border: 2px solid #00d4ff;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.25rem;
+  transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+  pointer-events: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-drag: none;
+}
+
+.control-btn:active {
+  background: rgba(0, 212, 255, 0.5);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+  transform: scale(0.92);
+}
+
+.shoot-btn {
+  border-color: #ff4444;
+  background: rgba(255, 68, 68, 0.2);
+}
+
+.shoot-btn:active {
+  background: rgba(255, 68, 68, 0.5);
+  box-shadow: 0 0 20px rgba(255, 68, 68, 0.8);
+}

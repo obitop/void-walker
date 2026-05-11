@@ -1,0 +1,46 @@
+#hud {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 14px;
+  background: linear-gradient(180deg, rgba(0, 0, 20, 0.92), transparent);
+  border-bottom: 1px solid #00ffff1a;
+}
+
+.hud-item {
+  font-size: 0.46rem;
+  color: #006688;
+  letter-spacing: 0.12em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hud-item b {
+  color: #00ddff;
+}
+
+.hp-bar-bg {
+  width: 80px;
+  height: 5px;
+  background: #001122;
+  border: 1px solid #00ffff33;
+  border-radius: 2px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.hp-bar-fill {
+  height: 100%;
+  transition:
+    width 0.3s,
+    background 0.3s;
+}

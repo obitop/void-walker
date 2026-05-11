@@ -1,0 +1,405 @@
+.coop-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 450px;
+  z-index: 100;
+}
+
+.coop-content {
+  position: relative;
+  background: rgba(4, 31, 39, 0.95);
+  border: 2px solid #00aaff44;
+  border-radius: 8px;
+  padding: 30px 25px;
+  box-shadow:
+    0 0 22px #00ffff44,
+    inset 0 0 14px #00ffff0e;
+}
+
+.btn-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: #00aaff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.btn-close:hover {
+  color: #00ffff;
+}
+
+.coop-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.coop-header h2 {
+  font-size: 1.3rem;
+  color: #00e5ff;
+  letter-spacing: 0.15em;
+  margin: 0 0 5px;
+}
+
+.coop-header .subtitle {
+  font-size: 0.65rem;
+  color: #556677;
+  letter-spacing: 0.2em;
+}
+
+.player-input-section {
+  margin-bottom: 20px;
+}
+
+.player-input-section label {
+  display: block;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: #778899;
+  margin-bottom: 8px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #00aaff44;
+  border-radius: 4px;
+  color: #fff;
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-field:focus {
+  border-color: #00ffff;
+}
+
+.input-field::placeholder {
+  color: #445566;
+}
+
+.tab-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #00aaff44;
+  color: #00aabb;
+  font-size: 0.6rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  border-color: #00ffff;
+  color: #00ffff;
+}
+
+.tab.active {
+  background: rgba(0, 229, 255, 0.15);
+  border-color: #00ffff;
+  color: #00ffff;
+}
+
+.tab-content {
+  margin-top: 15px;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.content-section label {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: #778899;
+}
+
+.description {
+  font-size: 0.75rem;
+  color: #667788;
+  line-height: 1.5;
+}
+
+.btn-primary {
+  padding: 14px 24px;
+  background: transparent;
+  border: 1px solid #00aaff44;
+  color: #00bbdd;
+  font-size: 0.65rem;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  font-family: "Courier New", monospace;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover:not(:disabled) {
+  border-color: #00ffff;
+  box-shadow:
+    0 0 22px #00ffff44,
+    inset 0 0 14px #00ffff0e;
+  color: #fff;
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  padding: 12px 20px;
+  background: transparent;
+  border: 1px solid #ff666644;
+  color: #ff8888;
+  font-size: 0.6rem;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  font-family: "Courier New", monospace;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  border-color: #ff8888;
+  color: #ff9999;
+}
+
+.btn-back {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: transparent;
+  border: none;
+  color: #556677;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  font-family: "Courier New", monospace;
+}
+
+.btn-back:hover {
+  color: #00aaff;
+}
+
+.divider {
+  text-align: center;
+  color: #445566;
+  font-size: 0.7rem;
+  margin: 15px 0;
+}
+
+.available-rooms {
+  margin-top: 15px;
+}
+
+.available-rooms h4 {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: #556677;
+  margin-bottom: 10px;
+}
+
+.room-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #00aaff22;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.room-item:hover {
+  background: rgba(0, 229, 255, 0.05);
+  border-color: #00aaff44;
+}
+
+.room-name {
+  font-size: 0.85rem;
+  color: #00ccff;
+  letter-spacing: 0.1em;
+}
+
+.room-players {
+  font-size: 0.75rem;
+  color: #667788;
+}
+
+.room-status-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.room-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.room-header h2 {
+  font-size: 1rem;
+  color: #00e5ff;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 15px;
+  font-size: 0.55rem;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+}
+
+.status-badge.active {
+  background: rgba(255, 170, 0, 0.15);
+  border: 1px solid rgba(255, 170, 0, 0.4);
+  color: #ffaa00;
+}
+
+.status-badge.joined {
+  background: rgba(0, 255, 100, 0.15);
+  border: 1px solid rgba(0, 255, 100, 0.4);
+  color: #00ff66;
+}
+
+.room-code-box {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid #00aaff22;
+  border-radius: 6px;
+}
+
+.room-code-box .label {
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  color: #556677;
+}
+
+.code-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.code {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #00e5ff;
+  letter-spacing: 0.2em;
+}
+
+.btn-copy {
+  background: transparent;
+  border: 1px solid #00aaff44;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn-copy:hover {
+  border-color: #00ffff;
+}
+
+.players-display h3 {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: #778899;
+  margin-bottom: 12px;
+}
+
+.player-slots {
+  display: flex;
+  gap: 12px;
+}
+
+.player-slot {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #00aaff22;
+  border-radius: 6px;
+}
+
+.player-slot.filled {
+  border-color: #00aaff44;
+}
+
+.player-slot.empty {
+  border-style: dashed;
+  opacity: 0.6;
+}
+
+.player-slot .icon {
+  font-size: 1.3rem;
+}
+
+.player-slot .name {
+  font-size: 0.8rem;
+  color: #fff;
+  margin: 0;
+}
+
+.player-slot .role {
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  color: #00e5ff;
+  margin: 0;
+}
+
+.player-slot .status {
+  font-size: 0.7rem;
+  color: #556677;
+  margin: 0;
+}
+
+.room-info {
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.room-info p {
+  font-size: 0.7rem;
+  color: #667788;
+  margin: 5px 0;
+}
+
+.room-info .label {
+  color: #556677;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
