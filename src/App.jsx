@@ -1,25 +1,23 @@
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import Navigation from "./components/Navigation";
-import Home from "./pages/Home";
 import GamePage from "./pages/GamePage";
+import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
-import { ProtectedRoute } from "./components/ProtectedRoute";
-import { useAuth } from "./hooks/useAuth";
 
 function AppContent() {
-  const { isPending } = useAuth();
+  // const { isPending } = useAuth();
   const location = useLocation();
   const isGamePage = location.pathname === "/game";
 
-  if (isPending) {
-    return (
-      <div className="loading-container">
-        <div className="spinner">Loading...</div>
-      </div>
-    );
-  }
+  // if (isPending) {
+  //   return (
+  //     <div className="loading-container">
+  //       <div className="spinner">Loading...</div>
+  //     </div>
+  //   );
+  // }
 
   return (
     <>
