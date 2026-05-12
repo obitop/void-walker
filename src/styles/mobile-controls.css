@@ -15,7 +15,7 @@
   touch-action: manipulation;
 }
 
-@media (min-width: 769px) {
+@media (pointer: fine) {
   .mobile-controls {
     display: none;
   }
