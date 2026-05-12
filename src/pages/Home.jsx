@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+// import ghosty from "../assets/ghost-small.png";
 import "../App.css";
 
 export default function Home() {
@@ -13,7 +14,9 @@ export default function Home() {
         {/* Header Section */}
         <header className="home-header">
           <div className="logo-section">
-            <div className="logo-icon">🚀</div>
+            <div className="logo-icon">
+              <img src="/ghost-medium.png" alt="" style={{ fontSize: "2rem" }} />
+            </div>
             <h1 className="main-title">VOID WALKER</h1>
             <p className="subtitle">conquer the universe bitch</p>
           </div>

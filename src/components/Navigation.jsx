@@ -17,10 +17,9 @@ export default function Navigation() {
     <nav className="navbar">
       <div className="navbar-container">
         {/* Logo/Brand */}
-        <Link to="/" className="navbar-brand">
-          <span className="brand-icon">🚀</span>
-          <span className="brand-text">Void Walker</span>
-        </Link>
+        {/* <Link to="/" className="navbar-brand">
+          <span className="brand-icon"><img src="/ghost-medium.png" alt="" /></span>
+        </Link> */}
 
         {/* Navigation Links */}
         <div className="nav-menu">

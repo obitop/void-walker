@@ -35,7 +35,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  /* padding: 24px; */
   text-align: center;
 }
 
@@ -47,6 +47,13 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0;
+
+  background: radial-gradient(
+    ellipse at 50% 40%,
+    #03001c 0%,
+    #000008 65%,
+    #000 100%
+  );
 }
 
 @media (min-width: 769px) {
@@ -111,13 +118,6 @@ body {
   width: 100%;
   min-width: 0;
   padding: 40px 32px;
-
-  background: radial-gradient(
-    ellipse at 50% 40%,
-    #03001c 0%,
-    #000008 65%,
-    #000 100%
-  );
 }
 
 @media (min-width: 769px) {
@@ -197,8 +197,15 @@ body {
 }
 
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; box-shadow: 0 0 8px #00e5ff; }
-  50% { opacity: 0.5; box-shadow: 0 0 16px #00e5ff88; }
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 8px #00e5ff;
+  }
+  50% {
+    opacity: 0.5;
+    box-shadow: 0 0 16px #00e5ff88;
+  }
 }
 
 .btn-exit-coop {
@@ -366,7 +373,12 @@ body {
 .co-op-divider {
   width: 50%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.3), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 229, 255, 0.3),
+    transparent
+  );
   margin: 6px 0;
   flex-shrink: 0;
 }
@@ -456,8 +468,14 @@ body {
 }
 
 @keyframes contentFadeIn {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .co-op-hint {
@@ -570,7 +588,9 @@ body {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ============ ROOM CODE DISPLAY ============ */
@@ -599,9 +619,18 @@ body {
 }
 
 @keyframes ringPulse {
-  0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.6; }
-  50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.2; }
-  100% { transform: translate(-50%, -50%) scale(1.6); opacity: 0; }
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.6);
+    opacity: 0;
+  }
 }
 
 .room-code-label {
@@ -758,8 +787,27 @@ body {
 .game-over-screen {
   background: radial-gradient(
     ellipse at 50% 40%,
-    #1c0003 0%,
-    #080000 65%,
+    #041c00 0%,
+    #000800 65%,
+    #000 100%
+  );
+}
+
+.game-over-screen.won {
+  background: radial-gradient(
+    ellipse at 50% 40%,
+    #002414 0%,
+    #000d0a 65%,
+    #000 100%
+  );
+
+}
+
+.game-over-screen.lost {
+  background: radial-gradient(
+    ellipse at 50% 40%,
+    #1a0000 0%,
+    #0a0000 65%,
     #000 100%
   );
 }
@@ -778,24 +826,42 @@ body {
 /* ============ ANIMATIONS ============ */
 
 @keyframes flick {
-  0% { opacity: 1; }
-  50% { opacity: 0.7; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes twinkle {
-  0% { opacity: 0.5; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes glow {
-  0% { filter: drop-shadow(0 0 20px #00ccff); }
-  100% { filter: drop-shadow(0 0 30px #00e5ff); }
+  0% {
+    filter: drop-shadow(0 0 20px #00ccff);
+  }
+  100% {
+    filter: drop-shadow(0 0 30px #00e5ff);
+  }
 }
 
 @keyframes scan {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100%); }
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
 }
 
 /* ============ SCROLLBAR ============ */

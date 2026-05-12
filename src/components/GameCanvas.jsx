@@ -107,7 +107,9 @@ const startGame = () => {
 
         if (!engineRef.current.state.running) {
           console.log("engine ref not running, ending game");
-          const result = engineRef.current.endGame(true);
+          const currentSector = engineRef.current.state ? engineRef.current.state.sector : 1;
+          const won = currentSector >= 5; 
+          const result = engineRef.current.endGame(won);
           setGameResult(result);
           setIsPlaying(false);
           if (window.visualViewport) {
@@ -279,7 +281,7 @@ const startGame = () => {
         <div className="screen">
           <div className={`main-screen${coOpPlaying ? " co-op-active" : ""}`}>
             <div className="intro">
-              <div className="title-icon">👾</div>
+              <div className="title-icon"><img src="/ghost-medium.png" alt="" /></div>
               <h1 className="game-title">
                 VOID
                 <br />
@@ -541,7 +543,7 @@ const startGame = () => {
       )}
 
       {!isPlaying && gameResult && (
-        <div className="screen game-over-screen">
+        <div className={`screen game-over-screen ${gameResult.won ? 'won' : 'lost'}`}>
           <h1 className="game-title">
             {gameResult.won ? "VICTORY" : "GAME OVER"}
           </h1>
